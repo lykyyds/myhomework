@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>论坛</title>
+    <link rel="stylesheet" href="./css/nav.css">
+    <link rel="stylesheet" href="./css/all.css">
+    <link rel="stylesheet" href="./css/luntun.css">
+    <style>
+        body .shell-main-nav ul .nav-box {
+            left: 360px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: rgb(248, 248, 248);
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+
+        body .shell-main-nav {
+            margin-bottom: 0;
+        }
+
+        .main {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            max-width: 1430px;
+            overflow-x: hidden;
+            transform: translateY(0px);
+            background-color: #fff;
+            transition: .3s;
+            padding: 50px;
+            border: 1px solid #000;
+        }
+
+        .img {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            background-image: url('./image/2.png');
+            background-attachment: fixed;
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+
+        .img::after {
+            content: 'ikun论坛';
+            width: 500px;
+            height: 200px;
+            border-radius: 3px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            border: #fff 10px solid;
+            color: #fff;
+            letter-spacing: 30px;
+            font: 100 70px 'font';
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        /* -------------------------------------- */
+
+        .section-top {
+            width: 100%;
+            height: 300px;
+            display: flex;
+            justify-content: space-evenly;
+            margin-top: 50px;
+        }
+
+        .section-top-middle {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background-image: url('./image/标签.png');
+            background-size: cover;
+            background-position-y: -30px;
+            margin: 0 50px;
+            border: 15px solid rgba(0, 0, 0, 0.151);
+        }
+
+        .section-top-left,
+        .section-top-right {
+            width: 300px;
+            height: 300px;
+            font-size: 22px;
+            margin-top: 30px;
+        }
+
+        .section-top-left {
+            text-align: right;
+        }
+
+        .section-top p {
+            font-size: 26px;
+            color: #22A39F;
+            margin: 5px 0;
+        }
+
+        .section-middle,
+        .section-bottom {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .section-bottom {
+            position: relative;
+        }
+
+        .section-middle-box {
+            width: 100%;
+            display: flex;
+            margin: 50px 0;
+        }
+
+        .section-middle-left {
+            width: 600px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .section-middle-left span {
+            text-align: left;
+            color: rgb(241, 167, 167);
+            margin-top: 10px;
+        }
+
+        .section-middle-right {
+            width: 600px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .section-middle-right img {
+            width: 400px;
+        }
+
+        .section-middle-left span {
+            text-align: center;
+            font-size: 20px;
+        }
+
+        .Skills {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            margin: 40px 0;
+        }
+
+        .Skills li {
+            width: 50%;
+            display: flex;
+            justify-content: space-evenly;
+            margin: 20px 0;
+            height: 50px;
+            cursor: pointer;
+        }
+
+        .Skills li span,
+        .Skills li p {
+            text-align: center;
+            font-size: 20px;
+            display: block;
+            width: 50%;
+            transition: .2s;
+            letter-spacing: 0px;
+        }
+
+        .Skills li p {
+            color: #22A39F;
+        }
+
+        .Skills li:hover p {
+            letter-spacing: 5px;
+        }
+
+        .Achievement {
+            margin-top: 40px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .Achievement-left {
+            display: flex;
+            flex-direction: column;
+            width: 300px;
+        }
+
+        .Achievement-left h2 {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .Achievement-left span {
+            font-size: 10px;
+        }
+
+        .Achievement-right {
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            width: 450px;
+        }
+
+        .Achievement-right img {
+            width: 200px;
+            margin-left: 20px;
+            margin-bottom: 20px;
+            transition: .3s;
+        }
+
+        .Achievement-right img:hover {
+            transform: scale(1.1);
+        }
+
+        article {
+            display: flex;
+            justify-content: center;
+        }
+
+        aside {
+            width: 100%;
+            position: relative;
+            left: 50%;
+            transform: translate(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: rgb(240, 240, 224);
+            padding: 50px 0;
+        }
+
+        .bottom {
+            width: 1300px;
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+        }
+
+        .bottom::after {
+            content: '';
+            position: absolute;
+            top: -170px;
+            width: 100%;
+            text-align: center;
+            font: 300 40px '';
+        }
+
+        .bottom img {
+            width: 23%;
+            height: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="shell">
+        <div class="shell-main">
+            <div class="shell-main-nav">
+                <div class="logo">
+                    <img src="./image/chunluren.png" alt="">
+                    <span>友善交流嗷</span>
+                </div>
+                <ul>
+                    <li><a href="./index.html">首页地址</a></li>
+                    <li><a href="./Template.html">坤之食堂</a></li>
+                    <li><a href="./make.html">坤坤经历</a></li>
+                    <li><a href="./painter.html">坤坤论坛</a></li>
+                    <li><a href="./register.html">注册界面</a></li>
+                    <div class="nav-box"></div>
+                </ul>
+            </div>
+            <div class="img"></div>
+            <div class="main">
+                <section>
+                    <div class="section-top">
+                        <div class="section-top-left">
+                            <p> :Name<br /></p>
+                            小黑子<br />
+                            <p>:Age<br /></p>
+                            2.5years<br />
+                            <p>:Speciality<br /></p>
+                            正常 理智 纯路人 只解释不回黑<br />
+
+                        </div>
+                        <div class="section-top-middle">
+
+                        </div>
+                        <div class="section-top-right">
+                            <p>introduce:</p>
+                            一半心生愤怒，癌坤这年头都那么不要脸了吗还敢说自己是路人我听你放屁！看到最后几行我的手指不禁蠢蠢欲动，但是当我的手往下滑时我突然看到了熟悉的舞姿，脑内开始自动播放熟悉的舞曲，仿佛窥探到那性感又不失风度的白色肩带，配上背景音乐真是好
+                            一番盛景，我猛的一怔，内心的怒火已经散去，脑内只徒留下鸡你太美的余音袅袅
+
+                        </div>
+                    </div>
+                    <div class="section-middle">
+                        <h2 style="font-size: 30px; margin-top: 50px;">About the ikun</h2>
+                        <span>“Ikun is the art of life”</span>
+                        <div class="section-middle-box">
+                            <div class="section-middle-left">
+                                <span>Sep2019-Jun2020</span>
+                            </div>
+                            <div class="section-middle-right">
+                                <span>蔡徐坤这一生很难，也遇到过很多困难，他都克服了，有我们这群默默的守护着他，你们这群黑粉就别想黑他 </span>
+
+                            </div>
+                        </div>
+
+                        <div class="section-middle-box">
+                            <div class="section-middle-left">
+                                <span>Sep2020-Jun2021</span>
+                            </div>
+                            <div class="section-middle-right">
+                                <span>他拿姜拿到手软，你打字打到手软，所以这就是区别。你有什么资格黑他?
+                                    <br><br>
+
+                                    评论区好下头，ikun们越是这个时候越要冷静！坤哥好不容易从那段暗无天日的时光熬出来.</span>
+                            </div>
+                        </div>
+
+                        <div class="section-middle-box" style="border-bottom:solid 1px #000; padding-bottom: 20px;">
+                            <div class="section-middle-left">
+                                <span>Sep2021-Jun2022</span>
+                            </div>
+                            <div class="section-middle-right">
+                                <span>你黑蔡徐坤，我们只解释不回黑，不是因为我们不敢，而是牠告诉我们，无论这个世界怎么样，我们永远要善良
+                                    但是我们给你好好说话，你不要以为我们好说话，爱鲲不惹事，也从来不怕事.
+                                </span>
+                            </div>
+                        </div>
+
+
+                </section>
+                <article>
+                    <div class="section-bottom">
+
+                        <h2 style="margin-top: 60px; color: #22A39F">Tools</h2>
+                        <ul class="Skills" style="border-bottom:solid 1px #000; padding-bottom: 40px;">
+                            <li><span>Hand drawn</span>
+                                <p>★★★★☆</p>
+                            </li>
+                            <li><span>Ubee</span>
+                                <p>★★★★★</p>
+                            </li>
+                            <li><span>Sketch</span>
+                                <p>★★★★☆</p>
+                            </li>
+                            <li><span>perspective</span>
+                                <p>★★★★☆</p>
+                            </li>
+                            <li><span>color</span>
+                                <p>★★★★☆</p>
+                            </li>
+                            <li><span>structure</span>
+                                <p>★★★★★</p>
+                            </li>
+                        </ul>
+
+                    </div>
+                </article>
+                <aside>
+                    <h2 style="font-size: 30px; margin-top: 30px;">Readme</h2><br />
+                    <span>“最纯粹的ikun语录，需要最纯粹的品鉴”</span>
+                    <p style="margin-top: 50px;font-size: 18px; color: #37373796;">
+                        1、拜托你们膳待我的男骸亿点点好吗，就亿点点，真的很好玩吗？2、你们是不是人啊！道歉会不会！你们黑牠黑得那么爽，骂牠骂得那么爽，整天TM没有任何一个人会给牠道歉。你们这样会毁了他的前途，毁了牠的一生！！3、荔枝，你让我拿什么荔枝啊？我爱的那个牠都被你们这样对待了，还让我怎么荔枝，啊？看着牠被你们骂得狗血淋头我还坐视不管这就叫荔枝了吗？！4、笑死，你就这么几个表情包，啊？你除了这个表情包你发点新的过来啊，都看腻了好不好，小辣鸡。5、私生饭黑粉你们犯法了知道吗，牠很累的，被警察半夜敲门是什么滋味，被私生饭装跟踪器是什么滋味。6、告诉你蔡徐坤身上一根毛拔下来都比你好看，都比你有用，都比你有才华，都比你有颜值，都比你有能力。7、蔡徐坤到底怎么得罪你们了，为什么要这样对侍他。他真的很好，ikun不是不敢惹事，而是因为他告诉我们无论这个世界怎样我们要永远善良。蔡徐坤是我们ikun的底线，请大家放下偏见去看这个男孩。8、我庆幸我比流言蜚语更早认识蔡徐坤。未曾谋面的也终将会相遇。披金成王，伴坤远航！蔡徐坤值得9、蔡徐坤真的很不容易！千万不要回黑，既然不能让玩梗的人闭嘴，那我们就尽力将这件事情冷处理，不要被有心人利用。10、你们只把他当热度和玩笑，把别人的痛苦建立在自己的快乐之上，你们愧疚吗.
+
+
+                    </p>
+                </aside>
+            </div>
+            <p>
+                <img src="./image/jntm.png" width="25%">
+            </p>
+            <body>
+                <fieldset>
+                <legend>评论区</legend>
+                <div class="comtext">
+                    Name: <input id="idname" type="text" size="30"><br>
+                    <p></p>
+                    <textarea name="" id="commBox" cols="70" rows="12" placeholder="请输入评论..."></textarea>
+                    <input type="submit" value="提  交" class="combtn" />
+                </div>
+                    
+                <div>
+                    <ul>
+                    </ul>
+                </div>
+                </fieldset>
+            </body>
+            
+            <a href="list.html"><img class="bot" src="" width="50px"></a>
+            
+            <script>
+                window.onload = function() {
+                    var idname = document.querySelector("#idname");
+                    var commBox = document.querySelector("#commBox");
+                    var ul = document.querySelector("ul");
+                    var comtext = document.querySelector(".comtext");
+                    var combtn = document.querySelector(".combtn");
+            
+                    combtn.addEventListener('click', function() {
+                        if (!commBox.value) {
+                            console.log("评论为空");
+                        } else {
+                            var li = document.createElement("li");
+                            li.innerHTML = idname.value + "<p>" + commBox.value + "</p>" + "<a href=''>删除</a>" + "<p>" + "</p>";
+                            ul.insertBefore(li, ul.children[0]);
+                            commBox.value = '';
+                            //删除评论
+                            var del = document.querySelectorAll("a");
+                            for (var i = 0; i < del.length; i++) {
+                                del[i].onclick = function() {
+                                    ul.removeChild(this.parentNode);
+                                    return false;
+                                }
+                            }
+                        }
+                    })
+                }
+            </script>
+            
+            
+            <div class="bottom">
+                <img src="./image/表情包1.png" alt="">
+                <img src="./image/表情包2.png" alt="">
+                <img src="./image/表情包3.png" alt="">
+                <img src="./image/表情包4.png" alt="">
+            </div>
+            <div class="shell-main-footer">
+                <span>版权所有-ikun工作室</span>
+            </div>
+        </div>
+
+    </div>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.5.1.min.js"></script>
+    <script>
+        window.addEventListener('scroll', function () {
+            let top = window.scrollY
+            console.log(top)
+            if (top > 200) {
+                $('.main').css('transform', 'translateY(-300px)')
+            } else {
+                $('.main').css('transform', 'translateY(0%)')
+            }
+            // if (top > 650) {
+
+            // } else {
+
+            // }
+        })
+    </script>
+</body>
+
+</html>

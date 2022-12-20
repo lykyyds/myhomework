@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>坤坤经历</title>
+    <link rel="stylesheet" href="./css/nav.css">
+    <link rel="stylesheet" href="./css/all.css">
+    <style>
+        body .shell-main-nav ul .nav-box {
+            left: 240px;
+        }
+
+        body .shell-main {
+            margin-bottom: 0;
+        }
+
+        body .shell-main-nav {
+            margin-bottom: 0;
+        }
+
+        header {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            background-image: linear-gradient(to bottom, #a1e6ff, #a1e6ff);
+            height: 700px;
+        }
+
+        header img {
+            width: 500px;
+            height: 500px;
+            position: relative;
+        }
+
+        header h2 {
+            font: 100 60px '';
+            margin-bottom: 20px;
+            font-family: font;
+            letter-spacing: 5px;
+            border-bottom: 2px solid rgb(134, 134, 118);
+            color: #ffffff;
+        }
+
+        header p {
+            font: 100 30px '';
+            letter-spacing: 5px;
+        }
+
+        .h-b {
+            display: flex;
+            justify-content: space-evenly;
+            width: 90%;
+
+        }
+
+        .h-b p {
+            color: #fff;
+            margin-bottom: 10px;
+        }
+
+        .h-b-l,
+        .h-b-r {
+            width: 20%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        /* ------------------------------------------------------------------ */
+        footer {
+            max-width: 1430px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .content {
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: space-between;
+            background-color: #fff;
+            border: 1px rgba(0, 0, 0, 0.187) solid;
+            margin: 20px 0;
+        }
+
+        .left {
+            width: 70%;
+
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .left p {
+            text-align: left;
+            letter-spacing: 2px;
+            margin-top: 30px;
+            font: 600 25px '';
+            color: rgb(147, 145, 142);
+        }
+
+        .top {
+            margin: 30px 0;
+        }
+
+        .top table {
+            margin: 30px 0;
+            width: 100%;
+            border-collapse: collapse;
+            border: rgba(0, 0, 0, 0.216);
+        }
+
+        .top table td {
+            padding: 3px 10px;
+        }
+
+        .top table th {
+            background-color: rgb(248, 248, 248);
+        }
+
+        .left h2,
+        .right h2 {
+            font-size: 30px;
+            position: relative;
+            width: 100%;
+            /* height: 30px; */
+        }
+
+        .left h2::after,
+        .right h2::after {
+            content: '';
+            display: block;
+            position: absolute;
+            left: -20px;
+            background-color: rgb(100, 160, 240);
+            width: 15px;
+            height: 100%;
+            top: 0;
+        }
+
+        .right h2::after {
+            left: 0;
+        }
+
+        .right h2 {
+            padding: 0 20px;
+            font-size: 20px;
+        }
+
+        .left h2::before {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 80%;
+            height: 2px;
+            right: 0;
+            top: 50%;
+            transform: translate(0, -50%);
+            background-color: rgba(0, 0, 0, 0.223)
+        }
+
+        .left span {
+            font-size: 15px;
+        }
+
+        .imgs {
+            width: 100%;
+            display: flex;
+        }
+
+        .imgs img {
+            width: 25%;
+        }
+
+        .right {
+            width: 25%;
+            padding: 10px;
+        }
+
+        .right img {
+            width: 100%;
+            margin: 30px 0;
+        }
+
+        .bottom {
+            position: sticky;
+            top: 20px;
+        }
+
+        .b {
+            width: 100%;
+            background-color: #fff;
+            height: 60px;
+            line-height: 60px;
+            text-align: center;
+            border: rgba(0, 0, 0, 0.216) 1px solid;
+        }
+        @media (max-width:1000px){
+            .h-b-r,.h-b-l,.right{
+                display: none;
+            }
+            .content{
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="shell">
+        <div class="shell-main">
+            <div class="shell-main-nav">
+                <div class="logo">
+                    <img src="./image/chunluren.png" alt="">
+                    <span>偶像练习生的试炼？！</span>
+                </div>
+                <ul>
+                    <li><a href="./index.html">首页地址</a></li>
+                    <li><a href="./Template.html">坤之食堂</a></li>
+                    <li><a href="./make.html">坤坤经历</a></li>
+                    <li><a href="./painter.html">坤坤论坛</a></li>
+                    <li><a href="./register.html">注册界面</a></li>
+                    <div class="nav-box"></div>
+                </ul>
+            </div>
+        </div>
+        <header>
+            <h2>关于偶像练习生</h2>
+            <!-- <p>只做最优质的产品</p> -->
+            <div class="h-b">
+                <div class="h-b-l">
+                    <div class="h-b-l-h">
+                        <p>养成类真人秀节目</p>
+                        <span>《偶像练习生》（英语：Idol Producer）是由爱奇艺出品，北京鱼子酱文化传播有限责任公司联合制作的偶像竞演养成类真人秀</span>
+                    </div>
+                    <div class="h-b-l-b">
+                        <p>优质的嘉宾</p>
+                        <span>张艺兴担任”全民制作人代表“，李荣浩担任音乐导师，王嘉尔和欧阳靖担任Rap导师，程潇和周洁琼担任舞蹈导师</span>
+                    </div>
+                </div>
+                <img src="./image/界面1.png" alt="">
+                <div class="h-b-r">
+                    <div class="h-b-r-h">
+                        <p>当年出道人员</p>
+                        <span>蔡徐坤、陈立农、范丞丞、黄明昊、林彦俊、朱正廷、王子异、小鬼（王琳凯）、尤长靖</span>
+                    </div>
+                    <div class="h-b-r-b">
+                        <p>节目模式</p>
+                        <span>节目从中国国内外87家经纪公司、练习生公司的1908位练习生中推荐选拔100位练习生，在四个月中进行封闭式训练及录制，最终由全民票选出优胜9人，组成偶像男团出道。</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <footer>
+            <div class="content">
+                <div class="left">
+                    <div class="top">
+                        <h2>简介：</h2>
+                        <span><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;一个专注于网页设计与建设的技术团队！<br />
+                            　《偶像练习生》邀请制作人葛福鸿参与节目制作，节目打破传统规则，把内容与形式进行重组，开启“男团养成”模式，从“vocal”“dance”“Rap”三个方面的全方位指导，4个月的录制训练，让粉丝参与和体会到偶像的成长，打出“全民”的概念。<br /> 　
+                            节目集结《姐姐好饿》《爱上超模》《天使之路》等节目总监制姜滨，《2017快乐男声》总导演陈刚以及《我是歌手》《江苏卫视2016年跨年晚会》视觉总监唐焱等组成制作团队。</span>
+                    </div>
+                    <div class="top">
+                        <h2>坤个人经历：</h2>
+                        <br><span>蔡徐坤（KUN），1998年8月2日出生，中国内地男歌手、演员。</span><br>
+                        <br><span>2012年4月，蔡徐坤因参加综艺节目《向上吧！少年》进入全国200强而进入娱乐圈</span><br>
+                        <br><span>8月，参演个人首部偶像剧《童话二分之一》等等</span>
+                    </div>
+                    <div class="top">
+                        <h2>坤之详细介绍：</h2>
+                        <span>
+                            <br>
+                            2019年2月，首登北京台春晚便包揽词曲，为其创作歌曲《那年春天》。2019年2月19日，蔡徐坤合约案胜诉，与原公司经纪合约解除。3月22日，
+                            发布海外公演主题曲《Bigger》。
+                            <br>
+
+                            <br> 4月19日，发布单曲《Hard To Get》。12月25日，加盟《青春有你第二季》担任青春制作人代表。2020年1月18日，作为“湖南卫视春晚家乡推荐官”，参演《2020湖南卫视春节联欢晚会》。
+
+                            <br> 2022年1月24日， 工作室晒蔡徐坤手绘小老虎官宣加盟湖南卫视春晚 [134]  ；2月1日，参加《2022年北京广播电视台春节联欢晚会》，演唱歌曲《山河无恙在我胸》
+                            <br> 2月2日，参加《中国梦·我的梦——2022中国网络视听年度盛典》，并与黑豹乐队合唱《Dont Break My Heart》
+                            <br> 2月3日，被官宣为2月5日的腾讯冬奥报道雪舞官 ；3月，参加了《奔跑吧第六季》
+                            <br> 6月27日，参加《微博唱响未来毕业派对》；7月22日，发行单曲《Hug me》
+                            <br>
+                            8月18日，将参加易车超级818汽车狂欢夜·浙江卫视年中盛典 ；同年，加盟沸腾校园 
+                        </span>
+
+                    </div>
+                
+                 
+                </div>
+                <div class="right">
+                    
+                    <div class="bottom">
+                        <h2>制作流程：</h2>
+                        <br>
+                        <span>
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;⼀、破壳而出
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;⼆、猥琐发育
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;三、美国校队
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;四、偶像练习生的试炼
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;五、出道成名
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;六、热度经久不衰
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                        </span>
+                        <img src="./image/界面2.png" alt="">
+                    </div>
+
+                </div>
+            </div>
+        </footer>
+        <div class="shell-main-footer">
+            <span>版权所有-icxk工作室</span>
+        </div>
+    </div>
+
+</body>
+
+</html>
